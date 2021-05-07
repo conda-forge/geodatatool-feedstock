@@ -1,5 +1,5 @@
 {% set name = "geodatatool" %}
-{% set version = "0.0.4" %}
+{% set version = "0.0.5" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 5e10a067985a7bb62b4390896cbf5876723d558a525ba182aa9256c88993b209
+  sha256: 2900ecd3c051b0c9dc9dfb1e228b6e7ac11f07f90936fc197bf1491ca4c1fd60
 
 build:
   number: 0
@@ -19,6 +19,7 @@ requirements:
     - pip
     - python >=3.6
   run:
+    - earthengine-api
     - folium
     - ipyleaflet
     - pillow
